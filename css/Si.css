@@ -1,0 +1,43 @@
+.Fondo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Asegura que ocupe el 100% de la pantalla */
+    background: #1D3554;
+    margin: 0; /* Elimina márgenes para evitar desplazamiento */
+}
+
+.Card {
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente dentro del card */
+    align-items: center; /* Centra la imagen verticalmente dentro del card */
+    width: 90%;
+    max-width: 400px; /* Limita el tamaño máximo del card */
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(41, 41, 41);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.ImgCat {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del card */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.TextoBonito{
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+.TextoAnimado {
+    font-weight: bold;
+    animation: cambiarColor 3s infinite;
+}
+@keyframes cambiarColor {
+    0% { color: #ff8f9a; }   /* Pastel rojo claro */
+    33% { color: #90cfff; }  /* Pastel azul claro */
+    66% { color: #8dffa6; }  /* Pastel verde claro */
+    100% { color: #ffca8d; } /* Pastel naranja claro */
+}

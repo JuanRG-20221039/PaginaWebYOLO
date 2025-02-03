@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perdonar a Juan</title>
+    <link rel="stylesheet" href="../css/Perdonar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .CenterButtons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .CenterButtons button {
+            margin: 0 10px;
+        }
+        .Counter {
+            font-size: 1.2em;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body class="Fondo">
+    <div class="CardBlack TextCenter">
+        <h1 class="TextoAnimado TextoBonito">
+            ¿Perdonar a Juan?
+        </h1>
+    </div>
+    <div class="CenterButtons">
+        <button onclick="window.location.href='./Si.html';" class="BottonSi TextBoldButtons">
+            <strong>SI</strong>
+        </button>
+        <button onclick="handleNoClick();" class="BottonNo TextBoldButtons">
+            <strong>NO</strong>
+        </button>
+    </div>
+    <div class="TextCenter">
+        <p id="message" class="TextoBonito">...</p>
+        <span id="counter" class="Counter TextoBonito">50</span>
+    </div>
+
+    <script>
+        const messages = [
+            "Este botón no funciona.",
+            "Fuera de servicio.",
+            "¿Estás seguro de que quieres presionarlo?",
+            "Nada que ver aquí.",
+            "¡Intenta de nuevo más tarde!",
+            "Este botón es solo decorativo.",
+            "Presiona si te atreves… o no.",
+            "Sin función conocida.",
+            "Este botón no tiene poderes.",
+            "No presiones, es una trampa.",
+            "Botón en modo vacaciones.",
+            "Deshabilitado temporalmente.",
+            "Nada que esperar aquí.",
+            "Oops, parece que no funciona.",
+            "Solo para exhibición.",
+            "Presionado por accidente.",
+            "Este botón está roto.",
+            "¡Vaya, no hace nada!",
+            "Esa no es una buena idea.",
+            "Solo para que lo veas.",
+            "Botón no operativo.",
+            "No hay magia aquí.",
+            "¡No es un botón mágico!",
+            "Este botón está en huelga.",
+            "Función: Inexistente.",
+            "Acierta el botón, sin reacción.",
+            "¡Error 404: No encontrado!",
+            "Es solo una ilusión.",
+            "Botón en descanso.",
+            "Nada pasa al presionar esto.",
+            "No presiones este botón.",
+            "Botón sin propósito.",
+            "Sorpresa: Nada sucede.",
+            "Aquí no hay acción.",
+            "Inútil por ahora.",
+            "No hay retorno aquí.",
+            "¡Estas de broma?!",
+            "Sin propósito en la vida.",
+            "No esperes nada de esto.",
+            "Este botón está triste.",
+            "Sin funcionalidades activas.",
+            "No hay nada que hacer aquí.",
+            "Botón en pausa eterna.",
+            "Nada se activa con esto.",
+            "Te advertimos que no funciona.",
+            "No presionar. En serio.",
+            "Este botón es de adorno.",
+            "Es solo para hacerte pensar.",
+            "Botón sin acción real.",
+            "Nada sucederá aquí."
+        ];
+
+        let counter = 50;
+
+        function handleNoClick() {
+            if (counter > 0) {
+                counter--;
+                document.getElementById('counter').textContent = counter;
+                document.getElementById('message').textContent = messages[50 - counter];
+                if (counter === 0) {
+                    alert('BOOM');
+                    window.location.href = 'https://www.youtube.com/watch?v=wIkMTnrK8Kk&t=53s'; // Redirige al video en el segundo 53
+                }
+            }
+        }
+    </script>
+</body>
+</html>

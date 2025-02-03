@@ -1,0 +1,116 @@
+/* Estilos generales */
+.Fondo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    background: #1D3554;
+    height: 100vh;
+    text-align: center;
+}
+.MargenTop{
+    margin-top: -10px;
+}
+
+@keyframes colorChange {
+    0% { color: #ff6877; }
+    25% { color: #ffba6a; }
+    50% { color: #ffff6b; }
+    75% { color: #69ff8a; }
+    100% { color: #6abeff; }
+}
+
+.TextoBonito {
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    animation: colorChange 3s infinite alternate;
+}
+
+.img-size {
+    max-width: 40%;
+    border-radius: 20px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    margin: 10px 0;
+    border: 10px solid black;
+}
+
+.BottonSi {
+    width: 40%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to right, #87cbff, #86ffa0);
+    transition: transform 0.3s ease;
+    margin: 20px;
+}
+.BottonSi:hover {
+    transform: scale(1.05);
+}
+
+.BottonNo {
+    width: 40%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to right, #ff8692, #ffc684);
+    transition: transform 0.3s ease;
+    margin: 20px;
+}
+.BottonNo:hover {
+    transform: scale(1.05);
+}
+
+.TextBoldButtons{
+    font-size: 25px;
+}
+
+.CenterButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.mensaje {
+    font-style: italic; /* Texto en cursiva */
+    color: white; /* Color blanco */
+    opacity: 0.5; /* Opacidad de 0.5 */
+    font-size: 20px; /* Ajusta el tamaño de la fuente si lo deseas */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Opcional: agrega sombra al texto para hacerlo más visible */
+}
+
+/* Animación de los pétalos */
+@keyframes caer {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) translateX(20px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.petal {
+    position: absolute;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    background: #72d7ff;
+    border-radius: 50%;
+    opacity: 0.5;
+    box-shadow: 0px 0px 10px #b0e9ff;
+    animation: caer 5s linear infinite;
+}

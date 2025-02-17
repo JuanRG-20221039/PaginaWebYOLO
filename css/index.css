@@ -6,6 +6,9 @@
     flex-direction: column;
     padding: 10px;
     background: #1D3554;
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .TextoBonito {
@@ -17,6 +20,8 @@
     text-transform: uppercase;
     text-shadow: 0px 0px 10px #67a9ff;
     transition: color 0.3s ease, text-shadow 0.3s ease;
+    text-align: center;
+    padding: 0 15px;
 }
 
 .TextoBonito:hover {
@@ -32,7 +37,7 @@
 }
 
 .BottonRedirect {
-    width: 40%;
+    width: 100%;
     padding: 5px;
     border-radius: 10px;
     border: none;
@@ -51,14 +56,14 @@
 /* Contenedor del carrusel */
 .carousel-container {
     position: relative;
-    max-width: 80%;  /* Ajusta el tamaño total del carrusel */
+    max-width: 80%;
     padding: 10px;
     margin: auto;
     overflow: hidden;
 }
 
 .img-size {
-    max-width:15%;
+    max-width: 15%;
     border-radius: 20px;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
     margin: 0 15px 10px 10px;
@@ -67,27 +72,82 @@
 /* Carrusel */
 .carousel {
     display: flex;
-    transition: transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Efecto de deslizamiento */
+    transition: transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-/* Botones de navegación */
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 16px;
-    cursor: pointer;
-    font-size: 18px;
-    transform: translateY(-50%);
-    z-index: 10;
+/* Centrado de botones */
+.CenterButtons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.prev {
-    left: 0;
+.ColButtons {
+    width: 40%;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.next {
-    right: 0;
+/* Instagram */
+.CardInstagram {
+    width: 300px;
+    max-width: 100%;
+    box-sizing: border-box;
+    transform: scale(0.8);
+    transform-origin: top center;
+}
+
+.InstagramRow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Media Queries para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .TextoBonito {
+        font-size: 24px;
+    }
+
+    .TextoCursiva {
+        font-size: 16px;
+    }
+
+    .carousel-container {
+        max-width: 95%;
+    }
+
+    .img-size {
+        max-width: 40%;
+        margin: 0 5px 5px 5px;
+    }
+
+    .CenterButtons {
+        flex-direction: column;
+    }
+
+    .ColButtons {
+        width: 90%;
+        margin: 10px;
+    }
+
+    .BottonRedirect {
+        margin: 10px;
+    }
+
+    .CardInstagram {
+        transform: scale(1);
+        width: 100%;
+    }
 }

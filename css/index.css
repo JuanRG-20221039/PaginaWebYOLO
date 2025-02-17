@@ -126,6 +126,7 @@
 
     .carousel-container {
         max-width: 95%;
+        margin-right: 15px;
     }
 
     .img-size {
@@ -144,6 +145,11 @@
 
     .BottonRedirect {
         margin: 10px;
+    }
+
+    .InstagramRow{
+        justify-content: center;
+        margin-right: 15px;
     }
 
     .CardInstagram {

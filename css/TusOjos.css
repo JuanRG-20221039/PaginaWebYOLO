@@ -1,0 +1,61 @@
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Contenedor de video */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Video de fondo */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Contenido centrado */
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+/* Mensaje de amor */
+.mensaje-amor {
+    font-family: 'Pacifico', cursive;
+    color: #fff;
+    font-size: 50px;
+    animation: pulsate 2s infinite alternate;
+    margin: 0;
+    padding: 0;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+}
+
+/* Mensaje pequeño con Century Gothic */
+.mensaje-pequeno {
+    font-family: 'Century Gothic', sans-serif;
+    font-style: italic;
+    font-size: 20px;
+    color: white;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+}

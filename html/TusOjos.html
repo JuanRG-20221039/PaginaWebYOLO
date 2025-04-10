@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tus Ojos 💗</title>
+    <link rel="icon" type="image/png" href="../fotos14febrero/funnyCat.png">
+    <link rel="stylesheet" href="../css/TusOjos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay muted loop id="background-video">
+            <source src="../videos/videoplayback.webm" type="video/webm">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        
+        <audio id="musica" autoplay loop>
+            <source src="../audio/sisyphus.mp3" type="audio/mp3">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+        
+        <div class="content">
+            <h1 class="mensaje-amor mensaje-pequeno">lo que veo cuando te miro a los ojos...</h1>
+        </div>
+    </div>
+
+    <script>
+        // Asegurar que el audio se reproduzca cuando el usuario interactúe con la página
+        document.addEventListener('click', function() {
+            document.getElementById('musica').play();
+        });
+    </script>
+</body>
+</html>

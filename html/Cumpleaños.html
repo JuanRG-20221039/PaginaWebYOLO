@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños Yolo 🎂</title>
+    <link rel="stylesheet" href="../css/Cumpleaños.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body class="Fondo">
+    <audio id="musica" autoplay loop>
+        <source src="../audio/sisyphus.mp3" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <div class="Card">
+        <h1 class="TextoBonito TextoAnimado TituloEspecial">¡Feliz Cumpleaños Mi amorcito! 💗🎂</h1>
+        <img src="../img/Esposa.jpg" alt="Foto de Yolo" class="ImgFav">
+        <img src="../img/Esposo.jpg" alt="Foto de Yolo" class="ImgFav">
+    </div>
+
+    <div class="BirthdayCard">
+        <div class="CardHeader">
+            <h2 class="TextoBonito">Para mi persona favorita en este día tan especial</h2>
+        </div>
+        
+        <div class="CardContent">
+            <p class="TextoBonito">
+                Hoy cumples 22 años y no sabes cuánto me emociona poder estar a tu lado en este día tan especial. No solo celebramos el día en que llegaste al mundo, también celebramos que después de tanto tiempo puedas disfrutar este día.
+            </p>
+            <p class="TextoBonito">
+                Naciste para ser feliz, se que es difícil sonreír todos los días pero ahí estaré yo, para abrasarte cuando todo parece ir mal, y para enseñarte lo que es el amor de verdad. Quiero aprovechar este día no solo para desearte lo mejor, sino para recordarte cuánto te amo y cuánto significas para mí.
+            </p>
+            <p class="TextoBonito">
+                Tú, Amor, eres una persona increíble. Lo eres con todas tus dudas, con tus miedos y aun así sigues siendo la persona más hermosa que he conocido, por dentro y por fuera. Admiro tu fuerza, tu forma de amar, tu forma de cuidarme, y esa manera tan tuya de estar incluso cuando no dices nada. A veces pienso que no merezco tu amor, pero aquí estoy, recibiéndolo de ti todos los días, y prometiendo que haré todo por devolvértelo.
+            </p>
+            <p class="TextoBonito">
+                Hoy te miro y solo puedo agradecer que estés en mi vida. Quiero seguir festejando muchos cumpleaños contigo, quiero ver cómo creces, cómo cumples sueños, cómo sonríes por todo y por nada. Quiero estar ahí en cada etapa de tu vida, celebrarte, cuidarte y amarte como lo mereces.
+            </p>
+            <p class="TextoBonito">
+                Ojalá este cumpleaños esté lleno de cosas lindas, pero sobre todo de mucho amor, que lo puedas disfrutar, y de esas pequeñas cosas que a ti te hacen feliz. Y si en algún momento del día dudas de algo, recuerda que hay alguien en este mundo que te ama con cada pedacito de su alma y ese alguien soy yo.
+            </p>
+            <p class="TextoBonito">
+                Gracias por existir, gracias por amarme, gracias por elegirme.
+            </p>
+        </div>
+        
+        <div class="CardFooter">
+            <p class="TextoBonito TextoAnimado">Feliz cumpleaños, mi princesa.</p>
+            <p class="TextoBonito">Te amito mucho. 🎂🌷</p>
+        </div>
+
+        <!-- Confeti para decoración -->
+        <div id="confetti-container"></div>
+    </div>
+
+    <div class="CenterButtons">
+        <button onclick="window.location.href='../index.html';" class="BottonRedirect TextoCursiva">
+            Volver al Menú Principal 💕
+        </button>
+    </div>
+
+    <script>
+        // Asegurar que el audio se reproduzca cuando el usuario interactúe con la página
+        document.addEventListener('click', function() {
+            document.getElementById('musica').play();
+        });
+
+        // Crear confeti
+        const confettiContainer = document.getElementById('confetti-container');
+        const colors = ['#ff6b8b', '#ffb347', '#a6e7ff', '#b0ff9d', '#ffff9d', '#d9a6ff'];
+
+        // Aumentar la cantidad de confeti para que cubra todo el contenedor
+        for (let i = 0; i < 100; i++) {
+            const confetti = document.createElement('div');
+            confetti.classList.add('confetti');
+            
+            // Distribuir el confeti por todo el contenedor
+            confetti.style.left = Math.random() * 100 + '%';
+            confetti.style.top = Math.random() * 100 + '%';
+            
+            // Variar el tamaño del confeti
+            const size = Math.random() * 8 + 5; // Entre 5px y 13px
+            confetti.style.width = size + 'px';
+            confetti.style.height = size + 'px';
+            
+            // Variar la velocidad de caída
+            confetti.style.animationDuration = (Math.random() * 5 + 3) + 's';
+            confetti.style.animationDelay = Math.random() * 5 + 's';
+            
+            // Asignar color aleatorio
+            confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            
+            confettiContainer.appendChild(confetti);
+        }
+    </script>
+</body>
+</html>
